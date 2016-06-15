@@ -1,10 +1,7 @@
 {
-  "name": "moverspro",
+  "name": "meanboot",
   "main": "index.js",
   "version": "0.0.0",
-  "authors": [
-    "dev <dev@muvus.co.uk>"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",

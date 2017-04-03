@@ -1,5 +1,6 @@
 app.factory('details', function() {
     return {
-        number: '555-5555'
+        number: '0208 771 2362',
+        email: 'info@citywindowsandglass.co.uk'
     }
 })

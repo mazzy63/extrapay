@@ -3,13 +3,13 @@ var express         = require('express');
 var app             = express();
 var bodyParser      = require('body-parser');
 // DB
-var mongoose        = require('mongoose');
+//var mongoose        = require('mongoose');
 // DB Collection
 //var Quote       = require(__dirname + '/server/models/quote');
 // DB config
-var configDB = require('./config/database.js');
+//var configDB = require('./config/database.js');
 // Connect DB
-mongoose.connect(configDB.url);
+//mongoose.connect(configDB.url);
 
 // Set Port
 app.set('port', (process.env.PORT || 5002));

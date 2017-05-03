@@ -12,4 +12,6 @@
 
 .tag-img {
   margin-left: 40px;
+  max-width: 350px;
+  max-height: 40px;
 }

@@ -1,6 +1,11 @@
 app.controller('HomeCtrl', function($scope, $timeout, $location) {
 
   $scope.page = $location.path();
+  var paramValue = $location.search().src;
+  if(paramValue == 'sent') {
+    $location.url($location.path());
+    alert('Email sent! We will reply shortly. Thank you.');
+  }
 
   $('.menu-item').removeClass('current-menu-item');
   if($scope.page == '/') {

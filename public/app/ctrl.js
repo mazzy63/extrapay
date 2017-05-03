@@ -1,314 +1,126 @@
-app.controller('HomeCtrl', function($scope, $timeout, details, $location) {
+app.controller('HomeCtrl', function($scope, $timeout, $location) {
 
-  $scope.details = details;
+  $scope.page = $location.path();
+
+  $('.menu-item').removeClass('current-menu-item');
+  if($scope.page == '/') {
+    $('#home-menu').addClass('current-menu-item');
+  }
+  if($scope.page == '/about') {
+    $('#about-menu').addClass('current-menu-item');
+  }
+  if($scope.page == '/reviews') {
+    $('#reviews-menu').addClass('current-menu-item');
+  }
+  if($scope.page == '/support') {
+    $('#support-menu').addClass('current-menu-item');
+  }
+
+  $scope.toggleChoose = function(id) {
+    $('.acc-btn').addClass('collapsed');
+    $('.'+id+'').removeClass('collapsed');
+    $('.panel-collapse').hide()
+    $('#'+id+'').fadeIn();
+  }
 
   $timeout(function () {
-    new WOW().init();
+    var $ = window.jQuery;
+    var $window = $(window);
+    var $sliderPro = $('#header .slider-pro');
 
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
+    var bp = {
+    1820: {
+    height: 950
+    },
+    1720: {
+    height: 1000
+    },
+    1620: {
+    height: 1050
+    },
+    1520: {
+    height: 1100
+    },
+    1420: {
+    height: 1150
+    },
+    1320: {
+    height: 1200
+    },
+    1220: {
+    height: 1250
+    },
+    1120: {
+    height: 1300
+    },
+    1020: {
+    height: 1350
+    },
+    974: {
+    height: 1350,
+    forceSize: 'none'
+    },
+    920: {
+    height: 1400,
+    forceSize: 'none'
+    },
+    820: {
+    height: 1450,
+    forceSize: 'none'
+    },
+    750: {
+    height: 1500,
+    forceSize: 'none'
+    },
+    650: {
+    height: 1600,
+    forceSize: 'none'
+    },
+    550: {
+    height: 1700,
+    forceSize: 'none'
+    },
+    450: {
+    height: 2000,
+    forceSize: 'none'
+    },
+    350: {
+    height: 2800,
+    forceSize: 'none'
+    },
+    300: {
+    height: 3200,
+    forceSize: 'none'
+    }
+  };
+
+    $sliderPro.sliderPro({
+    width: 1920,
+    height: 900,
+    forceSize: 'fullWidth',
+    slideDistance: 0,
+    autoplay: false,
+    touchSwipe: false,
+    autoScaleLayers: false,
+    breakpoints: bp
     });
-    //Menu Slide
-    var windoWidth = $(window).width();
 
-    if (windoWidth < 768) {
-        $('.sub-menu a').on('click', function ($) {});
+    /*$('.carousel-testimonials').slick();*/
+    $('.carousel-clients').slick({
+      //slidesPerRow: 5,
+      //responsive: bp,
+      slidesToShow: 5
+    });
 
-        $('.sub-menu').on('click', function () {
-
-            $(this).toggleClass('menu-close');
-            $(this).find('a').siblings('.dropdown-menu').slideToggle(500);
-        });
-    }
-
-    //Mobile Menu
-
-    if ($.fn.owlCarousel) {
-        var sliderwrapper = $('.sliderwrapper');
-        $('.slider-wrapper').owlCarousel({
-            loop: true,
-            items: 1,
-            margin: 0,
-            animateIn: "zoomInCustom",
-            animateOut: "fadeOut",
-        });
-
-        sliderwrapper.on('translate.owl.carousel', function () {
-            $('.slide-content h2').removeClass('bounceIn animated').hide();
-            $('.slide-content span').removeClass('slideInLeft animated').hide();
-            $('.slide-content a').removeClass('slideInUp animated').hide();
-        });
-
-        sliderwrapper.on('translated.owl.carousel', function () {
-            $('.slide-content h2').addClass('bounceIn animated').show();
-            $('.slide-content span').addClass('slideInLeft animated').show();
-            $('.slide-content a').addClass('slideInUp animated').show();
-        });
-
-
-        $('.service-slider').owlCarousel({
-            items: 1,
-            loop: true,
-            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-            navs: true,
-        });
-
-
-
-        $('.project-slide').owlCarousel({
-            items: 4,
-            loop: true,
-            nav: true,
-            loop: true,
-            dots: false,
-            autoplayHoverPause: true,
-            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                480: {
-                    items: 2,
-                },
-                768: {
-                    items: 3,
-                },
-                991: {
-                    items: 4,
-                }
-            }
-        });
-
-        //    client-area
-
-        $('.partner-slide').owlCarousel({
-            items: 5,
-            loop: true,
-            margin: 0,
-            loop: true,
-            autoplay: true,
-            dots: false,
-            autoplayHoverPause: true,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 2,
-                },
-                480: {
-                    items: 3,
-                },
-                768: {
-                    items: 4,
-                },
-                991: {
-                    items: 5,
-                }
-            }
-        });
-
-        //Project_Area
-
-        //    More porject slide
-        $('.more-project-slide').owlCarousel({
-            items: 3,
-            loop: true,
-            nav: true,
-            margin: 30,
-            loop: true,
-            dots: false,
-            autoplayHoverPause: true,
-            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                480: {
-                    items: 2,
-                },
-                768: {
-                    items: 3,
-                },
-            }
-        });
-
-        // client-area
-        $('.client-slide').owlCarousel({
-            dots: false,
-            items: 3,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-            nav: true,
-            center: true,
-            margin: 10,
-            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    center: true,
-                    singleItem: true,
-                    itemsScaleUp: true,
-                },
-                768: {
-                    items: 3,
-                    center: true,
-                    singleItem: false,
-                    itemsScaleUp: false,
-                },
-                960: {
-                    items: 3,
-                    center: true,
-                    singleItem: false,
-                    itemsScaleUp: false,
-                }
-            }
-        });
-    }
-
-    if ($.fn.magnificPopup) {
-        $('.proudct-hover a').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true
-            },
-        });
-    }
-
-    //Project_Area
-
-    // Plus Isotope
-    if ($.fn.isotope) {
-        $('.porject-list ul li').on('click', function () {
-            $(".porject-list ul li").removeClass("active");
-            $(this).addClass("active");
-
-            var selector = $(this).attr('data-filter');
-            $(".project-area").isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false,
-                }
-            });
-            return false;
-        });
-    }
-
-  }, 500);
-
-
-
-
-
-
-
-
-
-
-
+    $sliderPro.on('gotoSlideComplete', function() {
+    $window.trigger('resize.px.parallax');
+    });
+  }, 1);
 
 })
 
 
-app.controller('ConCtrl', function($scope, $timeout, details) {
-  function initialize() {
-      var farmgate = {
-          lat: 51.4049697,
-          lng: -0.09963229999993928
-      };
-      var mapProp = {
-          center: new google.maps.LatLng(farmgate.lat, farmgate.lng),
-          navigationControl: false,
-          mapTypeControl: false,
-          scaleControl: false,
-          draggable: true,
-          scrollwheel: false,
-          scrollwheel: 0,
-          navigationControl: 0,
-          streetViewControl: false,
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-          /*styles: [{
-              "featureType": "landscape",
-              "stylers": [{
-                  "color": "#f2f1f0"
-              }, {
-                  "visibility": "on"
-              }]
-          }, {
-              "featureType": "poi",
-              "stylers": [{
-                  "saturation": -100
-              }, {
-                  "lightness": 51
-              }, {
-                  "visibility": "simplified"
-              }]
-          }, {
-              "featureType": "road.highway",
-              "stylers": [{
-                  "color": "#f2f1f0"
-              }, {
-                  "visibility": "on"
-              }]
-          }, {
-              "featureType": "road.arterial",
-              "stylers": [{
-                  "color": "#03ff21"
-              }, {
-                  "visibility": "on"
-              }]
-          }, {
-              "featureType": "road.local",
-              "stylers": [{
-                  "color": "#f9bf3b"
-              }, {
-                  "visibility": "off"
-              }]
-          }, {
-              "featureType": "transit",
-              "stylers": [{
-                  "saturation": -100
-              }, {
-                  "visibility": "simplified"
-              }]
-          }, {
-              "featureType": "administrative.province",
-              "stylers": [{
-                  "visibility": "off"
-              }]
-          }, {
-              "featureType": "water",
-              "elementType": "labels",
-              "stylers": [{
-                  "visibility": "on"
-              }, {
-                  "color": "#f9bf3b"
-              }]
-          }, {
-              "featureType": "water",
-              "elementType": "geometry",
-              "stylers": [{
-                  "color": "#fbbb3e"
-              }, {
-                  "visibility": "on"
-              }]
-          }]*/
-      };
-      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-      var marker = new google.maps.Marker({
-          position: farmgate,
-          map: map,
-          animation: google.maps.Animation.BOUNCE,
-          icon: '/assets/img/location.png',
-      });
-      marker.addListener('click', toggleBounce);
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
+app.controller('OtherCtrl', function($scope, $timeout, $location) {
+
 
 })

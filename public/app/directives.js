@@ -21,17 +21,3 @@ app.directive('foot', function() {
 		controller: 'HomeCtrl',
 	}
 })
-
-app.directive('cta', function() {
-	return {
-		templateUrl: dir+'cta.html',
-		controller: 'HomeCtrl',
-	}
-})
-
-app.directive('info', function() {
-	return {
-		templateUrl: dir+'info.html',
-		controller: 'HomeCtrl',
-	}
-})

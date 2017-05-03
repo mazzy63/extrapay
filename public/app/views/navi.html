@@ -1,77 +1,192 @@
-<body>
-    <!-- Preloader start
-    <div class="factorian-site-preloader-wrap">
-        <div class="spinner-2"></div>
+<!-- #nav-mobile -->
+<nav id="nav-mobile">
+  <div class="scrollbar-inner">
+
+    <button type="button" class="navbar-btn-close"><i class="ion ion-close"></i>Close</button>
+
+    <div class="navbar-menu">
+      <ul class="nav">
+        <li class="menu-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="menu-item">
+          <a href="/about">About us</a>
+        </li>
+        <li class="menu-item">
+          <a href="/reviews">Reviews</a>
+        </li>
+        <li class="menu-item">
+          <a href="/support">Support</a>
+        </li>
+      </ul>
     </div>
-    <!--  Header Top Area Start-->
-    <div class="header-top">
-        <div class="container header-border">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="header-left">
-                        <ul>
-                            <li><a href="tel:{{details.number}}"><i class="fa fa-phone" aria-hidden="true"></i> {{details.number}}</a></li>
-                            <li><a href="mailto:{{details.email}}"><i class="fa fa-envelope" aria-hidden="true"></i> {{details.email}}</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.End Of Header Left -->
-                </div>
-                <div class="col-sm-6">
-                    <div class="header-right">
-                        <ul class="socials">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
+  </div>
+</nav>
+<!-- #nav-mobile end -->
+
+<!-- #body-wrap -->
+<div id="header">
+
+  <!-- #header -->
+  <div id="">
+
+    <!-- #nav-mobile-top -->
+    <div id="nav-mobile-top">
+
+      <!-- .container -->
+      <div class="container-fluid">
+        <div class="navmenu">
+
+          <button type="button" class="navbar-btn-toggle"><i class="ion ion-navicon"></i></button>
+
+          <div class="navbar-logo">
+            <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a> <!-- site logo -->
+          </div>
+
         </div>
+      </div>
+      <!-- .container end -->
+
     </div>
-    <!--  Header Top Area End-->
-    <!--  Header Area Start-->
-    <div class="header-area" id="home">
+    <!-- #nav-mobile-top end -->
+
+    <!-- #navigation -->
+    <nav id="navigation">
+
+      <!-- .navtop -->
+      <div class="navtop">
+
+        <!-- .container -->
         <div class="container">
-            <div class="row header-bottom">
-                <div class="col-sm-3 col-xs-12">
-                    <!--  Header Logo Start  -->
-                    <div class="logo-area">
-                        <a href="index-2.html"><img src="/assets/img/city-logo.jpg" alt="Logo Here" /></a>
-                    </div>
+
+          <div class="nav-txt">
+            <p><i class="ion ion-android-phone-portrait"></i> Have Questions? Call For Free: <strong><a href="#">081-254-5678</a></strong></p>
+          </div>
+
+          <div class="nav-socials">
+            <a href="#" title="Facebook"><i class="ion ion-social-facebook"></i></a>
+            <a href="#" title="Google Plus"><i class="ion ion-social-googleplus"></i></a>
+            <a href="#" title="Twitter"><i class="ion ion-social-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="ion ion-social-instagram"></i></a>
+            <a href="#" title="Pinterest"><i class="ion ion-social-pinterest"></i></a>
+            <a href="#" title="Vimeo"><i class="ion ion-social-vimeo"></i></a>
+            <a href="#" title="Dribbble"><i class="ion ion-social-dribbble"></i></a>
+            <a href="#" title="Youtube"><i class="ion ion-social-youtube"></i></a>
+          </div>
+
+        </div>
+        <!-- .container end -->
+
+      </div>
+      <!-- .navtop end -->
+
+      <!-- .navbar -->
+      <div class="navbar">
+
+        <!-- .container -->
+        <div class="container">
+          <div class="navbar-wrap">
+
+            <div class="navbar-logo">
+              <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a> <!-- site logo -->
+            </div>
+
+            <div class="navbar-menu">
+              <ul class="nav">
+                <li id="home-menu" class="menu-item">
+                  <a href="/">Home</a>
+                </li>
+                <li id="about-menu" class="menu-item">
+                  <a href="/about">About us</a>
+                </li>
+                <li id="reviews-menu" class="menu-item">
+                  <a href="/reviews">Reviews</a>
+                </li>
+                <li id="support-menu" class="menu-item">
+                  <a href="/support">Support</a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- .container end -->
+
+      </div>
+      <!-- .navbar end -->
+
+    </nav>
+    <!-- #navigation end -->
+
+    <!-- .slider-pro -->
+    <div ng-if=" page == '/' " class="slider-pro">
+      <div class="sp-slides">
+
+         <div class="sp-slide">  <!-- 2 -->
+          <img class="sp-image" src="assets/images/blank.gif" data-src="assets/images/content/sliders/2.jpg" alt="Image">
+          <div class="header-overlay header-overlay70">
+            <div class="container">
+              <div class="header-txt header-txt-center">
+                <h1 style="color: #fff;" class="sp-layer sp-layer-1" data-show-transition="down" data-show-delay="400">An Umbrella Company That Just Works</h1>
+                <h2 style="color: #fff;" class="sp-layer sp-layer-2" data-show-transition="down" data-show-delay="700">Contracting means freedom, don't get held back by accounting headaches, let us help you.</h2>
+                <div class="sp-layer sp-layer-3" data-show-transition="up" data-show-delay="1000">
+                  <a href="#" class="btn-custom">Start Business</a>
+                  <a href="#" class="btn-custom btn-white">Learn More</a>
                 </div>
-                <!--  Header Logo Start End  -->
-                <div class="col-sm-9 col-xs-12">
-                    <!--  Header Menu Start  -->
-                    <div class="hero-area-mainmenu wow fadeInDown">
-                        <div class="hero-area-menu">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul id="nav" class="nav navbar-nav">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/double-glazing">Double Glazing</a></li>
-                                    <li><a href="/doors">Doors</a></li>
-                                    <li><a href="/conservatories">Conservatories</a></li>
-                                    <li><a href="/about">About</a></li>
-                                    <li><a target="_self" href="/contact">Contact</a></li>
-                                    <!--<li class="sub-menu"><a href="#">SHOP<span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="product-list.html">Product-List</a></li>
-                                            <li><a href="cart.html">Cart Page</a></li>
-                                            <li><a href="single-product.html">Single Product</a></li>
-                                            <li><a href="billing-details.html">Billing Details</a></li>
-                                            <li><a href="chack-out.html">Chack Out</a></li>
-                                        </ul>
-                                    </li>-->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  Header Menu End  -->
-                <div class="header-button"> <a href="/contact" class="red-btn">GET A QUOTE</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- .slider-pro end -->
+
+
+    <!-- .sub-header -->
+    <div ng-if=" page == '/about' " style="margin-top:0px;" class="sub-header padding-top160">
+        <!-- .container -->
+        <div class="container">
+            <h4 class="header-title">About Us</h4>
+            <div class="breadcrumbs">
+              <a href="/">Home</a> <span class="sep"> / </span><span class="current">About Us</span>
             </div>
         </div>
+        <!-- .container end -->
     </div>
-    <!--  Header Area End-->
+    <!-- .sub-header end -->
+
+
+    <!-- .sub-header -->
+    <div ng-if=" page == '/reviews' " style="margin-top:0px;" class="sub-header padding-top160">
+        <!-- .container -->
+        <div class="container">
+            <h4 class="header-title">Reviews</h4>
+            <div class="breadcrumbs">
+              <a href="/">Home</a> <span class="sep"> / </span><span class="current">Reviews</span>
+            </div>
+        </div>
+        <!-- .container end -->
+    </div>
+    <!-- .sub-header end -->
+
+    <!-- .sub-header -->
+    <div ng-if=" page == '/support' " style="margin-top:0px;" class="sub-header padding-top160">
+        <!-- .container -->
+        <div class="container">
+            <h4 class="header-title">Support</h4>
+            <div class="breadcrumbs">
+              <a href="/">Home</a> <span class="sep"> / </span><span class="current">Support</span>
+            </div>
+        </div>
+        <!-- .container end -->
+    </div>
+    <!-- .sub-header end -->
+
+  
+
+  </div>
+  <!-- #header end -->

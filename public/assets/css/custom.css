@@ -15,3 +15,15 @@
   max-width: 350px;
   max-height: 40px;
 }
+
+@media (max-width: 991px) {
+
+  .sp-slides-container {
+    padding-top: 0px;
+  }
+
+  .sub-header {
+    padding-top: 25px !important;
+  }
+
+}

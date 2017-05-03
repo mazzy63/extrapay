@@ -28,6 +28,21 @@ app.controller('HomeCtrl', function($scope, $timeout, $location) {
     $('#'+id+'').fadeIn();
   }
 
+  $scope.openMobMenu = function() {
+    console.log('in');
+    if( $('#nav-mobile').is(':visible') ) {
+      $('#nav-mobile').css('display', 'none');
+      $('#nav-mobile').css('position', 'fixed');
+      $('#nav-mobile').css('left', '-40px');
+      } else {
+        console.log('closed');
+        $('#nav-mobile').css('display', 'block');
+        $('#nav-mobile').css('position', 'absolute');
+        $('#nav-mobile').css('left', '0');
+      }
+  }
+
+
   $timeout(function () {
     var $ = window.jQuery;
     var $window = $(window);

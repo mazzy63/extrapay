@@ -1,3 +1,5 @@
+var loadCount = 1;
+
 app.controller('HomeCtrl', function($scope, $timeout, $location) {
 
   $scope.page = $location.path();
@@ -106,11 +108,15 @@ app.controller('HomeCtrl', function($scope, $timeout, $location) {
     });
 
     /*$('.carousel-testimonials').slick();*/
-    $('.carousel-clients').slick({
-      //slidesPerRow: 5,
-      //responsive: bp,
-      slidesToShow: 5
-    });
+    if(loadCount == 1) {
+      $('.carousel-clients').slick({
+        //slidesPerRow: 5,
+        //responsive: bp,
+        slidesToShow: 5
+      });
+    }
+    loadCount++;
+
 
     $sliderPro.on('gotoSlideComplete', function() {
     $window.trigger('resize.px.parallax');

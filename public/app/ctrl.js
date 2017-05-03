@@ -99,12 +99,12 @@ app.controller('HomeCtrl', function($scope, $timeout, $location) {
     $sliderPro.sliderPro({
     width: 1920,
     height: 900,
-    forceSize: 'fullWidth',
+    //forceSize: 'fullWidth',
     slideDistance: 0,
     autoplay: false,
     touchSwipe: false,
     autoScaleLayers: false,
-    breakpoints: bp
+    //breakpoints: bp
     });
 
     /*$('.carousel-testimonials').slick();*/

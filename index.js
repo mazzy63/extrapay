@@ -12,7 +12,7 @@ var bodyParser      = require('body-parser');
 //mongoose.connect(configDB.url);
 
 // Set Port
-app.set('port', (process.env.PORT || 5002));
+app.set('port', (process.env.PORT || 5006));
 
 // Set Web Visible Path
 app.use(express.static(__dirname + '/public'));

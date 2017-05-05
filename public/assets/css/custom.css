@@ -1,5 +1,5 @@
 .sp-slides-container {
-  padding-top: 121px;
+  padding-top: 119px;
 }
 
 #header .header-overlay.header-overlay70 {
@@ -8,6 +8,7 @@
 
 #header .header-overlay {
     padding-top: 0px;
+    background-color: transparent;
 }
 
 .tag-img {
@@ -15,6 +16,26 @@
   max-width: 350px;
   max-height: 40px;
   vertical-align: top;
+}
+
+
+.navtop {
+  background: url(../images/content/tag.jpg) right center no-repeat;
+  background-color: #fff !important;
+  color: #777 !important;
+}
+
+#navigation .navtop a {
+    color: #777;
+}
+
+#navigation .navbar {
+  background: url(../images/content/blue-border.jpg) right bottom no-repeat;
+  box-shadow: none;
+}
+
+#navigation .nav > li {
+    padding: 24px 15px 25px;
 }
 
 @media (max-width: 991px) {

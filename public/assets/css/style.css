@@ -2002,14 +2002,14 @@ body.nav-mobile-on.nav-mobile-open #navigation.affix .navbar-logo, body.nav-shop
 		}
 		#header.header-2 #navigation .nav > li.menu-item-has-children > a:after, #header.header-5 #navigation .nav > li.menu-item-has-children > a:after { display:none; }
 		#navigation .nav > li.current-menu-item > a:before {
-			position:absolute;
+			/*position:absolute;
 			top:-34px;
 			left:50%;
 			content:'';
 			margin-left:-9px;
 			border-top:10px solid #00d27f;
 			border-right:9px solid transparent;
-			border-left:9px solid transparent;
+			border-left:9px solid transparent;*/
 		}
 		#header.header-2 #navigation .nav > li.current-menu-item > a:before {
 			right:0px;

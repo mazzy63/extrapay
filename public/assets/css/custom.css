@@ -38,6 +38,15 @@
     padding: 24px 15px 25px;
 }
 
+#header .sub-header {
+    background-image: url(../images/bg-sub-header.png);
+    background-position: 0px 119px;
+    background-color: #fff;
+    background-repeat: repeat-x;
+
+}
+
+
 @media (max-width: 991px) {
 
   .sp-slides-container {

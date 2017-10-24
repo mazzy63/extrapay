@@ -135,6 +135,24 @@ app.controller('HomeCtrl', function($scope, $timeout, $location) {
 
 })
 
+app.controller('SignupCtrl', function($scope, $timeout, $location) {
+  $('.student-loan').hide();
+
+  $('.student-loan-not-paid').on('click', function() {
+    if($(this).val() == 'No') {
+      $('.student-loan').hide();
+    } else {
+      $('.student-loan').show();
+    }
+  })
+
+  var paramValue = $location.search().src;
+  if(paramValue == 'sent') {
+    $location.url($location.path());
+    alert('Form sent! We will reply shortly. Thank you.');
+  }
+
+})
 
 app.controller('OtherCtrl', function($scope, $timeout, $location) {
 

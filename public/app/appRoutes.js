@@ -19,15 +19,17 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
         controller  : 'HomeCtrl'
     })
 
-    .when('/reviews', {
-        templateUrl : viewDir+'home/reviews-view.html',
-        controller  : 'HomeCtrl'
-    })
-
     .when('/support', {
         templateUrl : viewDir+'home/support-view.html',
         controller  : 'HomeCtrl'
     })
+
+    .when('/sign-up', {
+        templateUrl : viewDir+'home/signup-view.html',
+        controller  : 'SignupCtrl'
+    })
+
+
 
     .otherwise({
         redirectTo: '/'

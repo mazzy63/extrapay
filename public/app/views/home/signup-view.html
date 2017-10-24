@@ -1,0 +1,195 @@
+<div navi></div>
+
+<!-- #content -->
+<div id="content">
+
+  <!-- .container -->
+  <div class="container padding-top80 padding-bottom40">
+
+    <!-- .row -->
+    <div class="row">
+
+      <div class="col-sm-12 margin-bottom40">
+        <h5 class="text-uppercase margin-bottom20">
+          <strong>Sign up</strong>
+        </h5>
+        <p>As a new user we need the information on this form before your first payday to tell HMRC about you and help them use the correct tax code.</p>
+        <form method="post" action="https://formsubmit.io/send/yasinadam@outlook.com" class="affa-form-contact margin-top20">
+
+          <input name="_formsubmit_id" type="text" style="display:none">
+          <input name="_redirect" type="hidden" id="name" value="https://extrapay.herokuapp.com/sign-up?src=sent">
+
+          <div class="row">
+            <div class="col-md-4">
+              <label for="contact-name">Your Name <span class="required">*</span></label>
+              <input type="text" name="name" id="contact-name" required>
+            </div>
+            <div class="col-md-4">
+              <label for="contact-email">Date of Birth <span class="required">*</span></label><br>
+              <input class="col-md-12" type="date" name="postcode" id="contact-postcode" required>
+            </div>
+            <div class="col-md-4">
+              <label for="contact-name">National Insurance Number </label>
+              <input type="text" name="ni" id="contact-ni">
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <label for="contact-subject">Address <span class="required">*</span></label>
+              <input type="text" name="address" id="contact-address" required>
+            </div>
+            <div class="col-md-3">
+              <label for="contact-email">Postcode <span class="required">*</span></label>
+              <input type="text" name="postcode" id="contact-postcode" required>
+            </div>
+            <div class="col-md-3">
+              <label for="contact-name">Employment Start Date <span class="required">*</span></label><br>
+              <input type="date" class="col-md-12" name="employment-start-date" id="contact-esd">
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <fieldset class="form-group">
+                <legend>Are you male or female?</legend>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsGender" id="optionsRadios1" value="male" required>
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsGender" id="optionsRadios2" value="female" required>
+                    Female
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <hr>
+
+          <h5 class="text-uppercase margin-bottom20">
+            <strong>Employee Statement</strong>
+          </h5>
+
+          <fieldset class="form-group">
+            <legend>You need to select only one of the following statements <strong>A, B or C</strong></legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsStatement" id="optionsRadios1" value="A" required>
+                <b>A.</b><br>This is my first job since last 6 April and I have not been receiving taxable Jobseeker’s Allowance, Employment and Support Allowance, taxable Incapacity Benefit, State or Occupational Pension.
+              </label>
+            </div>
+            <br>
+            <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsStatement" id="optionsRadios2" value="B" required>
+                <b>B.</b><br>This is now my only job but since last 6 April I have had another job, or received taxable Jobseeker’s Allowance, Employment and Support Allowance or taxable Incapacity Benefit. I do not receive a State or Occupational Pension.
+              </label>
+            </div>
+            <br>
+            <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsStatement" id="optionsRadios2" value="C" required>
+                <b>C.</b><br>As well as my new job, I have another job or receive a State or Occupational Pension
+              </label>
+            </div>
+          </fieldset>
+
+          <hr>
+
+          <h5 class="text-uppercase margin-bottom20">
+            <strong>Student Loan</strong>
+          </h5>
+
+          <fieldset class="form-group">
+            <legend>Do you have a Student Loan which is not fully repaid?</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input student-loan-not-paid" name="student-loan-not-paid" id="student-loan-not-paid" value="Yes" required>
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input student-loan-not-paid" name="student-loan-not-paid" id="student-loan-not-paid" value="No" required>
+                No
+              </label>
+            </div>
+          </fieldset>
+
+
+          <fieldset class="form-group student-loan">
+            <legend>Are you repaying your Student Loan direct to the Student Loans Company by agreed monthly payments?</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="student-loan-monthly-payments" id="optionsRadios1" value="Yes">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="student-loan-monthly-payments" id="optionsRadios2" value="No">
+                No
+              </label>
+            </div>
+          </fieldset>
+
+
+          <fieldset class="form-group student-loan">
+            <legend>What type of Student Loan do you have?</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="student-loan-type" id="student-loan-type" value="Type 1">
+                <b>Type 1</b><br>
+                You will have a Plan 1 Student Loan if: You lived in Scotland or Northern Ireland when you started your course, or You lived in England or Wales and started your course before September 2012
+              </label>
+            </div>
+            <br>
+            <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="student-loan-type" id="student-loan-type" value="Type 2">
+                <b>Type 2</b><br>
+                You will have a Plan 2 Student Loan if you lived in England or Wales and started your course on or after 1 September 2012.
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-group">
+            <legend>Did you finish your studies before the last 6 April?</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="finish-studies-before-april" id="optionsRadios1" value="Yes"  required>
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="finish-studies-before-april" id="optionsRadios2" value="No"  required>
+                No
+              </label>
+            </div>
+          </fieldset>
+
+
+
+          <input type="submit" name="submit" value="Submit Form">
+          <div class="submit-status"></div>
+        </form>
+      </div>
+
+
+<!-- .container end -->
+
+</div>
+</div>
+<!-- #content end -->
+
+
+<div foot></div>

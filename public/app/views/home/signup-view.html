@@ -20,15 +20,19 @@
           <input name="_redirect" type="hidden" id="name" value="https://extrapay.herokuapp.com/sign-up?src=sent">
 
           <div class="row">
-            <div class="col-md-4">
-              <label for="contact-name">Your Name <span class="required">*</span></label>
-              <input type="text" name="name" id="contact-name" required>
+            <div class="col-md-3">
+              <label for="contact-name">First Name <span class="required">*</span></label>
+              <input type="text" name="name" id="first-name" required>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
+              <label for="contact-email">Last Name <span class="required">*</span></label><br>
+              <input class="col-md-12" type="text" name="last-name" id="last-name" required>
+            </div>
+            <div class="col-md-3">
               <label for="contact-email">Date of Birth <span class="required">*</span></label><br>
-              <input class="col-md-12" type="date" name="postcode" id="contact-postcode" required>
+              <input class="col-md-12" type="date" name="dob" id="dob" required>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <label for="contact-name">National Insurance Number </label>
               <input type="text" name="ni" id="contact-ni">
             </div>
@@ -37,18 +41,23 @@
 
 
           <div class="row">
-            <div class="col-md-6">
-              <label for="contact-subject">Address <span class="required">*</span></label>
-              <input type="text" name="address" id="contact-address" required>
+            <div class="col-md-3">
+              <label for="contact-subject">Address line 1 <span class="required">*</span></label>
+              <input type="text" name="address" id="contact-address-1" required>
+            </div>
+            <div class="col-md-3">
+              <label for="contact-subject">Address line 2</label>
+              <input type="text" name="contact-address-2" id="contact-address-2" >
+            </div>
+            <div class="col-md-3">
+              <label for="contact-subject">Address line 3</label>
+              <input type="text" name="contact-address-3" id="contact-address-3">
             </div>
             <div class="col-md-3">
               <label for="contact-email">Postcode <span class="required">*</span></label>
               <input type="text" name="postcode" id="contact-postcode" required>
             </div>
-            <div class="col-md-3">
-              <label for="contact-name">Employment Start Date <span class="required">*</span></label><br>
-              <input type="date" class="col-md-12" name="employment-start-date" id="contact-esd">
-            </div>
+
           </div>
 
 

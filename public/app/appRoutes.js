@@ -29,6 +29,11 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
         controller  : 'SignupCtrl'
     })
 
+    .when('/pricing', {
+        templateUrl : viewDir+'home/pricing-view.html',
+        controller  : 'HomeCtrl'
+    })
+
 
 
     .otherwise({
